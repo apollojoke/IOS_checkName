@@ -7,12 +7,20 @@
 //
 
 #import "WDWAppDelegate.h"
+#import "WDWViewController.h"
 
 @implementation WDWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    WDWViewController *mainViewController=[[WDWViewController alloc]init];
+    UINavigationController *navigation=[[UINavigationController alloc]initWithRootViewController:mainViewController];
+    UIWindow *window=[[UIWindow alloc]init];
+    window.frame=[UIScreen mainScreen].bounds;
+    window.rootViewController=navigation;
+    [window makeKeyAndVisible];
+    self.window=window;
     return YES;
 }
 							

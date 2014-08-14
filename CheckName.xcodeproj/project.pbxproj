@@ -13,7 +13,6 @@
 		49B3078D199B398800BE9B52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49B3078B199B398800BE9B52 /* InfoPlist.strings */; };
 		49B3078F199B398800BE9B52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B3078E199B398800BE9B52 /* main.m */; };
 		49B30793199B398800BE9B52 /* WDWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B30792199B398800BE9B52 /* WDWAppDelegate.m */; };
-		49B30796199B398800BE9B52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B30794199B398800BE9B52 /* Main.storyboard */; };
 		49B30799199B398800BE9B52 /* WDWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B30798199B398800BE9B52 /* WDWViewController.m */; };
 		49B3079B199B398800BE9B52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B3079A199B398800BE9B52 /* Images.xcassets */; };
 		49B307A2199B398800BE9B52 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B307A1199B398800BE9B52 /* XCTest.framework */; };
@@ -21,6 +20,7 @@
 		49B307A4199B398800BE9B52 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B30786199B398800BE9B52 /* UIKit.framework */; };
 		49B307AC199B398800BE9B52 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49B307AA199B398800BE9B52 /* InfoPlist.strings */; };
 		49B307AE199B398800BE9B52 /* CheckNameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B307AD199B398800BE9B52 /* CheckNameTests.m */; };
+		49B307BB199B3BBF00BE9B52 /* WDWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B307BA199B3BBF00BE9B52 /* WDWPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		49B30790199B398800BE9B52 /* CheckName-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CheckName-Prefix.pch"; sourceTree = "<group>"; };
 		49B30791199B398800BE9B52 /* WDWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDWAppDelegate.h; sourceTree = "<group>"; };
 		49B30792199B398800BE9B52 /* WDWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDWAppDelegate.m; sourceTree = "<group>"; };
-		49B30795199B398800BE9B52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49B30797199B398800BE9B52 /* WDWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDWViewController.h; sourceTree = "<group>"; };
 		49B30798199B398800BE9B52 /* WDWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDWViewController.m; sourceTree = "<group>"; };
 		49B3079A199B398800BE9B52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,8 @@
 		49B307A9199B398800BE9B52 /* CheckNameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheckNameTests-Info.plist"; sourceTree = "<group>"; };
 		49B307AB199B398800BE9B52 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49B307AD199B398800BE9B52 /* CheckNameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckNameTests.m; sourceTree = "<group>"; };
+		49B307B9199B3BBF00BE9B52 /* WDWPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDWPerson.h; sourceTree = "<group>"; };
+		49B307BA199B3BBF00BE9B52 /* WDWPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDWPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +113,10 @@
 		49B30788199B398800BE9B52 /* CheckName */ = {
 			isa = PBXGroup;
 			children = (
+				49B307B8199B3B7B00BE9B52 /* Services */,
+				49B307B7199B3B7000BE9B52 /* Models */,
 				49B30791199B398800BE9B52 /* WDWAppDelegate.h */,
 				49B30792199B398800BE9B52 /* WDWAppDelegate.m */,
-				49B30794199B398800BE9B52 /* Main.storyboard */,
 				49B30797199B398800BE9B52 /* WDWViewController.h */,
 				49B30798199B398800BE9B52 /* WDWViewController.m */,
 				49B3079A199B398800BE9B52 /* Images.xcassets */,
@@ -150,6 +152,22 @@
 				49B307AA199B398800BE9B52 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49B307B7199B3B7000BE9B52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49B307B9199B3BBF00BE9B52 /* WDWPerson.h */,
+				49B307BA199B3BBF00BE9B52 /* WDWPerson.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		49B307B8199B3B7B00BE9B52 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +249,6 @@
 			files = (
 				49B3079B199B398800BE9B52 /* Images.xcassets in Resources */,
 				49B3078D199B398800BE9B52 /* InfoPlist.strings in Resources */,
-				49B30796199B398800BE9B52 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +270,7 @@
 				49B3078F199B398800BE9B52 /* main.m in Sources */,
 				49B30793199B398800BE9B52 /* WDWAppDelegate.m in Sources */,
 				49B30799199B398800BE9B52 /* WDWViewController.m in Sources */,
+				49B307BB199B3BBF00BE9B52 /* WDWPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +299,6 @@
 				49B3078C199B398800BE9B52 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		49B30794199B398800BE9B52 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				49B30795199B398800BE9B52 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		49B307AA199B398800BE9B52 /* InfoPlist.strings */ = {
